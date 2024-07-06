@@ -1,10 +1,15 @@
-import React from "react";
-import css from "./Hero.module.css";
+import React, { useEffect, useState } from "react";import css from "./Hero.module.css";
 import HeroImg from "../../assets/hero.png";
 import { RiShoppingBagFill } from "react-icons/ri";
 import { BsArrowRight } from "react-icons/bs";
 import { motion } from "framer-motion";
+import { useNavigate } from "react-router-dom";
+
 const Hero = () => {
+  const navigate=useNavigate();
+  const handleSignupClick = () => {
+    navigate('/signup'); 
+  };
   const transition = { duration: 3, type: "spring" };
   const mobile = window.innerWidth<=768? true:false;
   return (
@@ -21,6 +26,8 @@ const Hero = () => {
           </span>
         </div>
       </div>
+
+      
 
       {/* main image with cirlce back */}
       <div className={css.wrapper}>
@@ -46,7 +53,7 @@ const Hero = () => {
         >
           <RiShoppingBagFill />
           <div className={css.signup}>
-            <span>Best Signup Offers</span>
+          <span onClick={handleSignupClick}>Best Signup Offers</span>
             <div>
               <BsArrowRight />
             </div>
