@@ -1,5 +1,6 @@
 .container {
-    padding: 1.5rem;
+    padding: 3rem;
+    padding-top: 1rem;
     display: flex;
   }
   .logo {
@@ -28,6 +29,7 @@
     display: flex;
     gap: 2rem;
     font-weight: 500;
+    padding-right: 0.2;
   }
   .menu > li:hover {
     color: #fe956f;
@@ -43,13 +45,22 @@
     height: 30%;
   }
   .cart {
-    width: 1.5rem;
+    width: 10rem;
     height: 1.5rem;
+
   }
   
   .bars{
     display: none;
   }
+  .signupButton {
+    box-sizing: border-box;
+    padding-left: 2px;
+    padding-right: 2px;
+    width: auto;
+  }
+  
+  
   
   @media screen and (max-width: 856px) {
     .search {
@@ -79,5 +90,6 @@
     .bars{
       display: block;
     }
+  
   }
   

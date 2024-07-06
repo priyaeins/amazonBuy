@@ -1,16 +1,17 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@500&display=swap');
 
+/* Define CSS variables */
+:root {
+    --bg: #f8e367; /* Background color variable */
+    --black: #333; /* Text color variable */
+}
+
+/* Apply styles to body */
 body {
     margin: 0;
     font-family: 'Poppins', sans-serif;
-    background: var(--bg); /* Ensure to define --bg variable */
-    transition: all 0.3s ease; /* Fixed spelling and set transition duration */
-    color: var(--black); /* Ensure to define --black variable */
-    scroll-behavior: smooth;
-}
-
-/* Example of how to define the CSS variables */
-:root {
-    --bg: #f0f0f0; /* Example background color */
-    --black: #333; /* Example text color */
+    background-color: var(--bg); /* Use the --bg variable for background */
+    transition: all 0.3s ease; /* Smooth transition effect */
+    color: var(--black); /* Use the --black variable for text color */
+    scroll-behavior: smooth; /* Smooth scrolling behavior */
 }
