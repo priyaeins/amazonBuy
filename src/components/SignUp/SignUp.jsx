@@ -29,10 +29,10 @@ export default function SignUp({ setIsSignedUp }) {
       password: data.get('password'),
     });
     setAlertVisible(true);
-    setIsSignedUp(true); // Set the sign-up state to true
+    setIsSignedUp(true); 
     setTimeout(() => {
       navigate('/');
-    }, 2000); // Redirect to home page after 2 seconds
+    }, 2000); 
   };
 
   return (

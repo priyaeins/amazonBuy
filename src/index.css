@@ -4,14 +4,26 @@
 :root {
     --bg: #f8e367; /* Background color variable */
     --black: #333; /* Text color variable */
+    padding-left: 25px;
+    padding-right: 25px;
 }
 
 /* Apply styles to body */
 body {
-    margin: 0;
+    margin: 8px;
     font-family: 'Poppins', sans-serif;
     background-color: var(--bg); /* Use the --bg variable for background */
     transition: all 0.3s ease; /* Smooth transition effect */
     color: var(--black); /* Use the --black variable for text color */
     scroll-behavior: smooth; /* Smooth scrolling behavior */
+}
+
+
+.App {
+    display: flex;
+    flex-direction: column;
+    padding-left: -100px;
+    padding-right: 20px;
+    padding-top: 20px;
+    padding-bottom: 20px;
 }
