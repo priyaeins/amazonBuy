@@ -57,6 +57,10 @@ const Header = ({ isSignedUp, setIsSignedUp }) => {
     navigate('/brands');
   };
 
+  const handlecart = () =>{
+    navigate("/cart");
+  }
+
   return (
     <div className={css.container}>
       <div className={css.logo}>
@@ -71,8 +75,6 @@ const Header = ({ isSignedUp, setIsSignedUp }) => {
         <ul className={css.menu} style={{ display: showMenu ? 'inherit' : 'none' }}>
           <li onClick={handleCollectionClick}>Collections</li>
           <li onClick={handleBrands}>Brands</li>
-          <li>New</li>
-          <li>Sales</li>
           <li>ENG</li>
         </ul>
 
@@ -102,8 +104,9 @@ const Header = ({ isSignedUp, setIsSignedUp }) => {
           onClick={isSignedUp ? handleLogoutClick : handleSignUpClick}
         >
           {isSignedUp ? 'Logout' : 'Sign Up'}
+
         </Button>
-        <CgShoppingBag className={css.cart} />
+        <CgShoppingBag onclick={handlecart} className={css.cart} />
       </div>
 
       <Dialog

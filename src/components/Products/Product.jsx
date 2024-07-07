@@ -3,13 +3,19 @@ import css from "./Product.module.css";
 import Plane from "../../assets/plane.png";
 import { ProductsData } from "../../data/products";
 import { useAutoAnimate } from '@formkit/auto-animate/react';
-import { useLocation } from "react-router-dom";
+import { useLocation, useNavigate } from "react-router-dom"; // Import useNavigate
 
 const Products = () => {
   const [parent] = useAutoAnimate();
+  const navigate = useNavigate(); // Initialize useNavigate
   const [MenuProducts, setMenuProducts] = useState(ProductsData);
   const location = useLocation();
   
+  const handleCart = (product) => {
+    // Navigate to cart page with state containing product
+    navigate('/cart', { state: { product } });
+  };
+
   useEffect(() => {
     const searchParams = new URLSearchParams(location.search);
     const searchTerm = searchParams.get("search");
@@ -46,7 +52,7 @@ const Products = () => {
                   <span>{product.detail}</span>
                 </div>
                 <span>{product.price}$</span>
-                <div>Shop Now</div>
+                <div onClick={() => handleCart(product)}>Shop Now</div> {/* Pass product to handleCart */}
               </div>
               <img src={product.img} alt="" className="img-p" />
             </div>
